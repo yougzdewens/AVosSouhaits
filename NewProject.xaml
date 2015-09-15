@@ -1,0 +1,11 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="AVosSouhaits.NewProject"
+	x:Name="Window"
+	Title="Nouveau Projet"
+	Width="387.2" Height="312.8"
+	WindowStartupLocation="CenterOwner">
+
+	<Grid x:Name="LayoutRoot"/>
+</Window>

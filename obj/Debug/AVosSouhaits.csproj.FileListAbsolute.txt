@@ -1,0 +1,14 @@
+C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\bin\Debug\AVosSouhaits.exe.config
+C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\bin\Debug\AVosSouhaits.exe
+C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\bin\Debug\AVosSouhaits.pdb
+C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\obj\Debug\MainWindow.baml
+C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\obj\Debug\NewProject.baml
+C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\obj\Debug\MainWindow.g.cs
+C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\obj\Debug\NewProject.g.cs
+C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\obj\Debug\App.g.cs
+C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits_MarkupCompile.cache
+C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits.g.resources
+C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits.Properties.Resources.resources
+C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits.csproj.GenerateResource.Cache
+C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits.exe
+C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits.pdb
