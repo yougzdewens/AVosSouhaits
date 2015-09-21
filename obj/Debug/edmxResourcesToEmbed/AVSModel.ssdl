@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AVSDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Projet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Civilite1" Type="int" />
+    <Property Name="Nom1" Type="nchar" MaxLength="30" />
+    <Property Name="Prenom1" Type="nchar" MaxLength="30" />
+    <Property Name="Civilite2" Type="int" />
+    <Property Name="Nom2" Type="nchar" MaxLength="30" />
+    <Property Name="Prenom2" Type="nchar" MaxLength="30" />
+    <Property Name="Adresse" Type="nchar" MaxLength="100" />
+    <Property Name="CodePostal" Type="nchar" MaxLength="10" />
+    <Property Name="Ville" Type="nchar" MaxLength="20" />
+    <Property Name="Telephone" Type="nchar" MaxLength="10" />
+    <Property Name="Email" Type="nchar" MaxLength="30" />
+    <Property Name="Budget" Type="int" />
+    <Property Name="DateMarriage" Type="date" />
+  </EntityType>
+  <EntityContainer Name="AVSDatabaseModelStoreContainer">
+    <EntitySet Name="Projet" EntityType="Self.Projet" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

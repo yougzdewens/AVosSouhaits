@@ -33,5 +33,16 @@ namespace AVosSouhaits.Properties {
                 return ((string)(this["BaseAVosSouhaitsConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=PORTABLE-HUGUES\\SQLEXPRESS;Initial Catalog=AVSDatabase;Persist Securi" +
+            "ty Info=True;User ID=adminEmimie;Password=Genie5959*;Pooling=False")]
+        public string AVSDatabaseConnectionString {
+            get {
+                return ((string)(this["AVSDatabaseConnectionString"]));
+            }
+        }
     }
 }

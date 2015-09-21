@@ -50,8 +50,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -68,6 +79,9 @@
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -76,11 +90,27 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BaseAVosSouhaitsDataSet.Designer.cs">
+    <Compile Include="AVSDatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BaseAVosSouhaitsDataSet.xsd</DependentUpon>
+      <DependentUpon>AVSDatabaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AVSModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AVSModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AVSModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AVSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AVSModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AVSModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -89,10 +119,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NewProject.xaml.cs">
       <DependentUpon>NewProject.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Projet.cs">
+      <DependentUpon>AVSModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -111,17 +148,35 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="BaseAVosSouhaitsDataSet.xsc">
-      <DependentUpon>BaseAVosSouhaitsDataSet.xsd</DependentUpon>
+    <EntityDeploy Include="AVSModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AVSModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AVSDatabaseDataSet.xsc">
+      <DependentUpon>AVSDatabaseDataSet.xsd</DependentUpon>
     </None>
-    <None Include="BaseAVosSouhaitsDataSet.xsd">
+    <None Include="AVSDatabaseDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BaseAVosSouhaitsDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>AVSDatabaseDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="BaseAVosSouhaitsDataSet.xss">
-      <DependentUpon>BaseAVosSouhaitsDataSet.xsd</DependentUpon>
+    <None Include="AVSDatabaseDataSet.xss">
+      <DependentUpon>AVSDatabaseDataSet.xsd</DependentUpon>
     </None>
+    <None Include="AVSModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AVSModel.edmx</DependentUpon>
+      <LastGenOutput>AVSModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="AVSModel.edmx.diagram">
+      <DependentUpon>AVSModel.edmx</DependentUpon>
+    </None>
+    <None Include="AVSModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AVSModel.edmx</DependentUpon>
+      <LastGenOutput>AVSModel.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -129,16 +184,9 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="BaseAVosSouhaits.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="BaseAVosSouhaits_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>BaseAVosSouhaits.mdf</DependentUpon>
-    </Content>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.1">
@@ -156,6 +204,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -12,3 +12,12 @@ C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\
 C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits.csproj.GenerateResource.Cache
 C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits.exe
 C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits.pdb
+C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits.csprojResolveAssemblyReference.cache
+C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\bin\Debug\EntityFramework.dll
+C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\bin\Debug\EntityFramework.xml
+C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\obj\Debug\Window1.baml
+C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\obj\Debug\Window1.g.cs
+C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits_MarkupCompile.lref
