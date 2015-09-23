@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AVSouhaitsDBModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=D:\AVosSouhaits\AVosSouhaits\bin\Debug\AVSouhaitsDB.sqlite" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Projets">
+    <Key>
+      <PropertyRef Name="IdProjet" />
+    </Key>
+    <Property Name="IdProjet" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Civilite1" Type="integer" />
+    <Property Name="Nom1" Type="varchar" MaxLength="2147483647" />
+    <Property Name="Prenom1" Type="varchar" MaxLength="2147483647" />
+    <Property Name="Civilite2" Type="integer" />
+    <Property Name="Nom2" Type="varchar" MaxLength="2147483647" />
+    <Property Name="Prenom2" Type="varchar" MaxLength="2147483647" />
+  </EntityType>
+  <EntityContainer Name="AVSouhaitsDBModelStoreContainer">
+    <EntitySet Name="Projets" EntityType="Self.Projets" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

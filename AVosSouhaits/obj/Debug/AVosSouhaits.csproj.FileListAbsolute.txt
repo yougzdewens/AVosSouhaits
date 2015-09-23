@@ -21,3 +21,31 @@ C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\
 C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\obj\Debug\Window1.g.cs
 C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\hugues\Documents\Visual Studio 2013\Projects\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits_MarkupCompile.lref
+D:\AVosSouhaits\AVosSouhaits\bin\Debug\AVosSouhaits.exe.config
+D:\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits.exe
+D:\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits.pdb
+D:\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits.csprojResolveAssemblyReference.cache
+D:\AVosSouhaits\AVosSouhaits\obj\Debug\MainWindow.baml
+D:\AVosSouhaits\AVosSouhaits\obj\Debug\MainWindow.g.cs
+D:\AVosSouhaits\AVosSouhaits\obj\Debug\NewProject.g.cs
+D:\AVosSouhaits\AVosSouhaits\obj\Debug\App.g.cs
+D:\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits_Content.g.cs
+D:\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits_MarkupCompile.cache
+D:\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits_MarkupCompile.lref
+D:\AVosSouhaits\AVosSouhaits\obj\Debug\NewProject.baml
+D:\AVosSouhaits\AVosSouhaits\bin\Debug\AVSouhaitsDB.sqlite
+D:\AVosSouhaits\AVosSouhaits\bin\Debug\AVSDatabaseLocal.mdf
+D:\AVosSouhaits\AVosSouhaits\bin\Debug\AVSDatabaseLocal_log.ldf
+D:\AVosSouhaits\AVosSouhaits\bin\Debug\AVosSouhaits.exe
+D:\AVosSouhaits\AVosSouhaits\bin\Debug\AVosSouhaits.pdb
+D:\AVosSouhaits\AVosSouhaits\bin\Debug\EntityFramework.dll
+D:\AVosSouhaits\AVosSouhaits\bin\Debug\EntityFramework.SqlServer.dll
+D:\AVosSouhaits\AVosSouhaits\bin\Debug\System.Data.SQLite.dll
+D:\AVosSouhaits\AVosSouhaits\bin\Debug\System.Data.SQLite.EF6.dll
+D:\AVosSouhaits\AVosSouhaits\bin\Debug\System.Data.SQLite.Linq.dll
+D:\AVosSouhaits\AVosSouhaits\bin\Debug\EntityFramework.xml
+D:\AVosSouhaits\AVosSouhaits\bin\Debug\EntityFramework.SqlServer.xml
+D:\AVosSouhaits\AVosSouhaits\bin\Debug\System.Data.SQLite.xml
+D:\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits.g.resources
+D:\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits.Properties.Resources.resources
+D:\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits.csproj.GenerateResource.Cache

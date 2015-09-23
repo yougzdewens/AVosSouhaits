@@ -32,12 +32,11 @@ namespace AVosSouhaits
             //CbCivi2.Items.Add(new ComboBoxItem() { Content = "Mlle", Tag = "2", IsSelected = true });
 
 
-            using (var context = new AVosSouhaits.AVSDatabaseEntities())
+            using (var context = new AVosSouhaits.AVSouhaitsDBEntities())
             {
                 // Query for all blogs with names starting with B 
-                var projet = (from b in context.Projets
-                            where b.Id == 1
-                            select b).First();
+                var projet = (from b in context.Projets                            
+                            select b).FirstOrDefault();
 
                 Binding myBinding = new Binding("projetViewSource");
                 myBinding.Source = projet;
@@ -72,12 +71,12 @@ namespace AVosSouhaits
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
 
-            AVosSouhaits.AVSDatabaseDataSet aVSDatabaseDataSet = ((AVosSouhaits.AVSDatabaseDataSet)(this.FindResource("aVSDatabaseDataSet")));
+            //AVosSouhaits.AVSDatabaseDataSet aVSDatabaseDataSet = ((AVosSouhaits.AVSDatabaseDataSet)(this.FindResource("aVSDatabaseDataSet")));
             // Load data into the table Projet. You can modify this code as needed.
-            AVosSouhaits.AVSDatabaseDataSetTableAdapters.ProjetTableAdapter aVSDatabaseDataSetProjetTableAdapter = new AVosSouhaits.AVSDatabaseDataSetTableAdapters.ProjetTableAdapter();
-            aVSDatabaseDataSetProjetTableAdapter.Fill(aVSDatabaseDataSet.Projet);
-            System.Windows.Data.CollectionViewSource projetViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("projetViewSource")));
-            projetViewSource.View.MoveCurrentToFirst();
+            //AVosSouhaits.AVSDatabaseDataSetTableAdapters.ProjetTableAdapter aVSDatabaseDataSetProjetTableAdapter = new AVosSouhaits.AVSDatabaseDataSetTableAdapters.ProjetTableAdapter();
+            //aVSDatabaseDataSetProjetTableAdapter.Fill(aVSDatabaseDataSet.Projet);
+            //System.Windows.Data.CollectionViewSource projetViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("projetViewSource")));
+            //projetViewSource.View.MoveCurrentToFirst();
         }
 	}
 }

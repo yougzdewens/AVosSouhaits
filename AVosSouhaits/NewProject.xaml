@@ -8,12 +8,12 @@
 	WindowStartupLocation="CenterOwner" Loaded="Window_Loaded">
 
     <Window.Resources>
-        <local:AVSDatabaseDataSet x:Key="aVSDatabaseDataSet"/>
-        <CollectionViewSource x:Key="projetViewSource" Source="{Binding Projet, Source={StaticResource aVSDatabaseDataSet}}"/>
+        <!--<local:AVSDatabaseDataSet x:Key="aVSDatabaseDataSet"/>-->
+        <!--<CollectionViewSource x:Key="projetViewSource" Source="{Binding Projet, Source={StaticResource aVSDatabaseDataSet}}"/>-->
     </Window.Resources>
 
-    <Grid x:Name="LayoutRoot" DataContext="{StaticResource projetViewSource}">
-        <ComboBox x:Name="CbCivi1" HorizontalAlignment="Left" Margin="167,75,0,0" VerticalAlignment="Top" Width="120" DisplayMemberPath="Civilite1" ItemsSource="{Binding}"/>
+    <Grid x:Name="LayoutRoot">
+        <ComboBox x:Name="CbCivi1" HorizontalAlignment="Left" Margin="167,75,0,0" VerticalAlignment="Top" Width="120" DisplayMemberPath="Civilite1"/>
         <Label Content="Civilité :" HorizontalAlignment="Left" Margin="313,75,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
         <Label Content="Nom :" HorizontalAlignment="Left" Margin="313,104,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
         <Label Content="Prénom :" HorizontalAlignment="Left" Margin="313,133,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
