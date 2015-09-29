@@ -92,24 +92,6 @@
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
-    <Compile Include="AVSouhaitsDB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AVSouhaitsDB.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AVSouhaitsDB.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AVSouhaitsDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AVSouhaitsDB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AVSouhaitsDB.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Projets.cs">
-      <DependentUpon>AVSouhaitsDB.tt</DependentUpon>
-    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -117,6 +99,21 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AVSDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AVSDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AVSDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AVSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AVSDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AVSDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -131,6 +128,9 @@
   <ItemGroup>
     <Compile Include="NewProject.xaml.cs">
       <DependentUpon>NewProject.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Projet.cs">
+      <DependentUpon>AVSDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -149,25 +149,25 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="AVSouhaitsDB.edmx">
+    <EntityDeploy Include="AVSDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>AVSouhaitsDB.Designer.cs</LastGenOutput>
+      <LastGenOutput>AVSDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="AVSouhaitsDB.Context.tt">
+    <None Include="AVSDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AVSouhaitsDB.edmx</DependentUpon>
-      <LastGenOutput>AVSouhaitsDB.Context.cs</LastGenOutput>
+      <DependentUpon>AVSDB.edmx</DependentUpon>
+      <LastGenOutput>AVSDB.Context.cs</LastGenOutput>
     </None>
-    <None Include="AVSouhaitsDB.edmx.diagram">
-      <DependentUpon>AVSouhaitsDB.edmx</DependentUpon>
+    <None Include="AVSDB.edmx.diagram">
+      <DependentUpon>AVSDB.edmx</DependentUpon>
+    </None>
+    <None Include="AVSDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AVSDB.edmx</DependentUpon>
+      <LastGenOutput>AVSDB.cs</LastGenOutput>
     </None>
     <None Include="AVSouhaitsDB.sqlite">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="AVSouhaitsDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AVSouhaitsDB.edmx</DependentUpon>
-      <LastGenOutput>AVSouhaitsDB.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

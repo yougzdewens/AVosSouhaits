@@ -13,10 +13,10 @@ namespace AVosSouhaits
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class AVSouhaitsDBEntities : DbContext
+    public partial class AVSouhaitsDBEntities1 : DbContext
     {
-        public AVSouhaitsDBEntities()
-            : base("name=AVSouhaitsDBEntities")
+        public AVSouhaitsDBEntities1()
+            : base("name=AVSouhaitsDBEntities1")
         {
         }
     
@@ -25,6 +25,6 @@ namespace AVosSouhaits
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Projets> Projets { get; set; }
+        public virtual DbSet<Projet> Projets { get; set; }
     }
 }

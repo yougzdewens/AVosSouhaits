@@ -12,7 +12,7 @@ namespace AVosSouhaits
     using System;
     using System.Collections.Generic;
     
-    public partial class Projets
+    public partial class Projet
     {
         public long IdProjet { get; set; }
         public Nullable<long> Civilite1 { get; set; }
@@ -21,5 +21,12 @@ namespace AVosSouhaits
         public Nullable<long> Civilite2 { get; set; }
         public string Nom2 { get; set; }
         public string Prenom2 { get; set; }
+        public string Adresse { get; set; }
+        public string CodePostal { get; set; }
+        public string Ville { get; set; }
+        public string Telephone { get; set; }
+        public string Email { get; set; }
+        public Nullable<long> Budget { get; set; }
+        public Nullable<System.DateTime> DateDuMariage { get; set; }
     }
 }
