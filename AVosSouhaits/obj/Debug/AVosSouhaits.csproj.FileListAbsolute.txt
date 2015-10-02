@@ -49,3 +49,6 @@ D:\AVosSouhaits\AVosSouhaits\bin\Debug\System.Data.SQLite.xml
 D:\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits.g.resources
 D:\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits.Properties.Resources.resources
 D:\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits.csproj.GenerateResource.Cache
+D:\Workingdir\Perso_AVosSouhaits\AVosSouhaits\AVosSouhaits\bin\Debug\AVosSouhaits.exe.config
+D:\Workingdir\Perso_AVosSouhaits\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits.exe
+D:\Workingdir\Perso_AVosSouhaits\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits.pdb
