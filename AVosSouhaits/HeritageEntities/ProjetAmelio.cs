@@ -6,9 +6,17 @@ using System.Threading.Tasks;
 
 namespace AVosSouhaits.HeritageEntities
 {
+    /// <summary>
+    /// projet amelioré
+    /// </summary>
     public class ProjetAmelio : Projet
     {
-
+        /// <summary>
+        /// Gets the civ1.
+        /// </summary>
+        /// <value>
+        /// The civ1.
+        /// </value>
         public string Civ1 { 
             get
             {
@@ -22,6 +30,12 @@ namespace AVosSouhaits.HeritageEntities
             }
         }
 
+        /// <summary>
+        /// Gets the civ2.
+        /// </summary>
+        /// <value>
+        /// The civ2.
+        /// </value>
         public string Civ2
         {
             get
@@ -36,6 +50,10 @@ namespace AVosSouhaits.HeritageEntities
             }
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ProjetAmelio"/> class.
+        /// </summary>
+        /// <param name="p">The p.</param>
         public ProjetAmelio(Projet p)
         {
             base.Civilite1 = p.Civilite1;

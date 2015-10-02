@@ -16,15 +16,21 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace AVosSouhaits
-{   
+{
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// The data list property
+        /// </summary>
         public static readonly DependencyProperty DataListProperty =
         DependencyProperty.Register("DataList", typeof(ObservableCollection<ProjetAmelio>), typeof(MainWindow));
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MainWindow"/> class.
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
@@ -33,6 +39,9 @@ namespace AVosSouhaits
             this.DataContext = this;            
         }
 
+        /// <summary>
+        /// Loads the projets.
+        /// </summary>
         private void LoadProjets()
         {
             using (var context = new AVosSouhaits.AVSouhaitsDBEntities())
@@ -51,6 +60,11 @@ namespace AVosSouhaits
             }
         }
 
+        /// <summary>
+        /// Handles the Click event of the Button control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
         private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
         {
 
@@ -61,6 +75,11 @@ namespace AVosSouhaits
             wind.Closing += new System.ComponentModel.CancelEventHandler(wind_Closing);
         }
 
+        /// <summary>
+        /// Edits the projet.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
         private void EditProjet(object sender, System.Windows.RoutedEventArgs e)
         {
             int idProjet = int.Parse(((Button)sender).Tag.ToString());
@@ -72,6 +91,11 @@ namespace AVosSouhaits
             wind.Closing += new System.ComponentModel.CancelEventHandler(wind_Closing);
         }
 
+        /// <summary>
+        /// Handles the Closing event of the wind control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.ComponentModel.CancelEventArgs"/> instance containing the event data.</param>
         private void wind_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             LoadProjets();
