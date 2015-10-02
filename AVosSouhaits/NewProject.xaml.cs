@@ -32,11 +32,11 @@ namespace AVosSouhaits
             //CbCivi2.Items.Add(new ComboBoxItem() { Content = "Mlle", Tag = "2", IsSelected = true });
 
 
-            using (var context = new AVosSouhaits.AVSouhaitsDBEntities1())
+            using (var context = new AVosSouhaits.AVSouhaitsDBEntities())
             {
                 // Query for all blogs with names starting with B 
-                var projet = (from b in context.Projets                            
-                            select b).FirstOrDefault();
+                var projet = (from b in context.Projets
+                              select b).FirstOrDefault();
 
                 Binding myBinding = new Binding("projetViewSource");
                 myBinding.Source = projet;

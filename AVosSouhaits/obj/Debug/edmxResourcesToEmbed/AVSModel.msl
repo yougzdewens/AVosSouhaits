@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="AVSDatabaseModelStoreContainer" CdmEntityContainer="AVSDatabaseEntities">
+  <EntityContainerMapping StorageEntityContainer="AVSouhaitsDBModelStoreContainer" CdmEntityContainer="AVSouhaitsDBEntities">
     <EntitySetMapping Name="Projets">
-      <EntityTypeMapping TypeName="AVSDatabaseModel.Projet">
-        <MappingFragment StoreEntitySet="Projet">
-          <ScalarProperty Name="Id" ColumnName="Id" />
+      <EntityTypeMapping TypeName="AVSouhaitsDBModel.Projet">
+        <MappingFragment StoreEntitySet="Projets">
+          <ScalarProperty Name="IdProjet" ColumnName="IdProjet" />
           <ScalarProperty Name="Civilite1" ColumnName="Civilite1" />
           <ScalarProperty Name="Nom1" ColumnName="Nom1" />
           <ScalarProperty Name="Prenom1" ColumnName="Prenom1" />
@@ -17,7 +17,7 @@
           <ScalarProperty Name="Telephone" ColumnName="Telephone" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Budget" ColumnName="Budget" />
-          <ScalarProperty Name="DateMarriage" ColumnName="DateMarriage" />
+          <ScalarProperty Name="DateDuMariage" ColumnName="DateDuMariage" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

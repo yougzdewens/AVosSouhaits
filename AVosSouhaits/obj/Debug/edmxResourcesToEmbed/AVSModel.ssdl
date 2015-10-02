@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="AVSDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="Projet">
+<Schema Namespace="AVSouhaitsDBModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=D:\Workingdir\Perso_AVosSouhaits\AVosSouhaits\AVosSouhaits\AVSouhaitsDB.sqlite" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Projets">
     <Key>
-      <PropertyRef Name="Id" />
+      <PropertyRef Name="IdProjet" />
     </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Civilite1" Type="int" />
-    <Property Name="Nom1" Type="nchar" MaxLength="30" />
-    <Property Name="Prenom1" Type="nchar" MaxLength="30" />
-    <Property Name="Civilite2" Type="int" />
-    <Property Name="Nom2" Type="nchar" MaxLength="30" />
-    <Property Name="Prenom2" Type="nchar" MaxLength="30" />
-    <Property Name="Adresse" Type="nchar" MaxLength="100" />
-    <Property Name="CodePostal" Type="nchar" MaxLength="10" />
-    <Property Name="Ville" Type="nchar" MaxLength="20" />
-    <Property Name="Telephone" Type="nchar" MaxLength="10" />
-    <Property Name="Email" Type="nchar" MaxLength="30" />
-    <Property Name="Budget" Type="int" />
-    <Property Name="DateMarriage" Type="date" />
+    <Property Name="IdProjet" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Civilite1" Type="integer" />
+    <Property Name="Nom1" Type="varchar" MaxLength="2147483647" />
+    <Property Name="Prenom1" Type="varchar" MaxLength="2147483647" />
+    <Property Name="Civilite2" Type="integer" />
+    <Property Name="Nom2" Type="varchar" MaxLength="2147483647" />
+    <Property Name="Prenom2" Type="varchar" MaxLength="2147483647" />
+    <Property Name="Adresse" Type="varchar" MaxLength="2147483647" />
+    <Property Name="CodePostal" Type="varchar" MaxLength="2147483647" />
+    <Property Name="Ville" Type="varchar" MaxLength="2147483647" />
+    <Property Name="Telephone" Type="varchar" MaxLength="2147483647" />
+    <Property Name="Email" Type="varchar" MaxLength="2147483647" />
+    <Property Name="Budget" Type="integer" />
+    <Property Name="DateDuMariage" Type="datetime" />
   </EntityType>
-  <EntityContainer Name="AVSDatabaseModelStoreContainer">
-    <EntitySet Name="Projet" EntityType="Self.Projet" Schema="dbo" store:Type="Tables" />
+  <EntityContainer Name="AVSouhaitsDBModelStoreContainer">
+    <EntitySet Name="Projets" EntityType="Self.Projets" store:Type="Tables" />
   </EntityContainer>
 </Schema>

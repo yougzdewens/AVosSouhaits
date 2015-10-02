@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("avsdatabaselocal.mdf")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("avsdatabaselocal_log.ldf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("avsmodel.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("avsmodel.tt")]
 
 
