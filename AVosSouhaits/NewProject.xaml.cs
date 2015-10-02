@@ -12,71 +12,76 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Linq;
+using AVosSouhaits.HeritageEntities;
 
 namespace AVosSouhaits
 {
-	/// <summary>
-	/// Interaction logic for NewProject.xaml
-	/// </summary>
-	public partial class NewProject : Window
-	{
-        private System.Windows.Data.CollectionViewSource customersViewSource;
+    /// <summary>
+    /// Interaction logic for NewProject.xaml
+    /// </summary>
+    public partial class NewProject : Window
+    {
+        public NewProject(int idProjet)
+        {
+            this.InitializeComponent();
 
-		public NewProject()
-		{
-			this.InitializeComponent();
-
-            //CbCivi1.Items.Add(new ComboBoxItem() { Content = "Mr", Tag = "1", IsSelected = true });
-            //CbCivi1.Items.Add(new ComboBoxItem() { Content = "Mlle", Tag = "2" });
-            //CbCivi2.Items.Add(new ComboBoxItem() { Content = "Mr", Tag = "1" });
-            //CbCivi2.Items.Add(new ComboBoxItem() { Content = "Mlle", Tag = "2", IsSelected = true });
-
-
-            using (var context = new AVosSouhaits.AVSouhaitsDBEntities())
+            if (idProjet > -1)
             {
-                // Query for all blogs with names starting with B 
-                var projet = (from b in context.Projets
-                              select b).FirstOrDefault();
+                using (var context = new AVosSouhaits.AVSouhaitsDBEntities())
+                {
+                    // Query for all blogs with names starting with B 
+                    var projet = (from b in context.Projets
+                                  where b.IdProjet == idProjet
+                                  select b).FirstOrDefault();
 
-                Binding myBinding = new Binding("projetViewSource");
-                myBinding.Source = projet;
-
+                    LayoutRoot.DataContext = projet;
+                }
             }
-
-            //AVSDatabaseEntities test = new AVosSouhaits.AVSDatabaseEntities();
-            //AVSDatabaseEntities entities = new AVSDatabaseEntities();
-            
-            //// Load data into Customers. You can modify this code as needed.
-            //customersViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("customersViewSource")));
-            //System.Data.Objects.ObjectQuery<AVosSouhaits.Projet> customersQuery = this.GetP(adventureWorksLTEntities);
-            //customersViewSource.Source = customersQuery.Execute(System.Data.Objects.MergeOption.AppendOnly);
-
-
-
-
-            //BaseAVosSouhaitsDataSet gbdd = new BaseAVosSouhaitsDataSet();
-            //gridMy.ItemsSource = gbdd.Tables[0];
-
-            //SqlConnection con = new SqlConnection(@"Data Source=PORTABLE-HUGUES\SQLEXPRESS;Initial Catalog=AVSDatabase;Persist Security Info=True;User ID=adminEmimie;Password=Genie5959*;Pooling=False");
-            //con.Open();
-            //SqlCommand cmd = new SqlCommand("Select * From [Projet]", con);
-            //SqlDataReader rd = cmd.ExecuteReader();
-            //DataTable test = new DataTable();
-            //test.Load(rd);
-            //int testtest = test.Rows.Count;
-
-			// Insert code required on object creation below this point.
-		}
+        }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
-            //AVosSouhaits.AVSDatabaseDataSet aVSDatabaseDataSet = ((AVosSouhaits.AVSDatabaseDataSet)(this.FindResource("aVSDatabaseDataSet")));
-            // Load data into the table Projet. You can modify this code as needed.
-            //AVosSouhaits.AVSDatabaseDataSetTableAdapters.ProjetTableAdapter aVSDatabaseDataSetProjetTableAdapter = new AVosSouhaits.AVSDatabaseDataSetTableAdapters.ProjetTableAdapter();
-            //aVSDatabaseDataSetProjetTableAdapter.Fill(aVSDatabaseDataSet.Projet);
-            //System.Windows.Data.CollectionViewSource projetViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("projetViewSource")));
-            //projetViewSource.View.MoveCurrentToFirst();
         }
-	}
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Projet projet = null;
+
+            projet = new Projet();
+
+            using (var context = new AVosSouhaits.AVSouhaitsDBEntities())
+            {
+                if (idProjet.Text != string.Empty)
+                {
+                    long idProj = long.Parse(idProjet.Text);
+
+                    projet = (from b in context.Projets
+                              where b.IdProjet == idProj
+                              select b).FirstOrDefault();
+                }
+                else
+                {
+                    context.Projets.Add(projet);
+                }
+
+                projet.Civilite1 = long.Parse(CbCivi1.SelectedValue.ToString());
+                projet.Nom1 = nom1.Text;
+                projet.Prenom1 = prenom1.Text;
+                projet.Civilite2 = long.Parse(CbCivi2.SelectedValue.ToString());
+                projet.Nom2 = nom2.Text;
+                projet.Prenom2 = prenom2.Text;
+                projet.Telephone = telephone.Text;
+                projet.Ville = ville.Text;
+                projet.Email = email.Text;
+                projet.Adresse = adresse.Text;
+                projet.CodePostal = codepostal.Text;
+                projet.Budget = long.Parse(budget.Text);
+                projet.DateDuMariage = DateTime.Parse(dateDuMarriage.Text);
+                
+                context.SaveChanges();
+            }
+
+            this.Close();
+        }
+    }
 }
