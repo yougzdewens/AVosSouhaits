@@ -75,3 +75,9 @@ D:\Workingdir\Perso_AVosSouhaits\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhait
 D:\Workingdir\Perso_AVosSouhaits\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits.Properties.Resources.resources
 D:\Workingdir\Perso_AVosSouhaits\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits.csproj.GenerateResource.Cache
 D:\Workingdir\Perso_AVosSouhaits\AVosSouhaits\AVosSouhaits\obj\Debug\AVosSouhaits_Content.g.cs
+D:\Workingdir\Perso_AVosSouhaits\AVosSouhaits\AVosSouhaits\obj\Debug\Administration.baml
+D:\Workingdir\Perso_AVosSouhaits\AVosSouhaits\AVosSouhaits\obj\Debug\Administration.g.cs
+D:\Workingdir\Perso_AVosSouhaits\AVosSouhaits\AVosSouhaits\obj\Debug\NewComposant.baml
+D:\Workingdir\Perso_AVosSouhaits\AVosSouhaits\AVosSouhaits\obj\Debug\NewComposant.g.cs
+D:\Workingdir\Perso_AVosSouhaits\AVosSouhaits\AVosSouhaits\obj\Debug\ProjetsPage.baml
+D:\Workingdir\Perso_AVosSouhaits\AVosSouhaits\AVosSouhaits\obj\Debug\ProjetsPage.g.cs

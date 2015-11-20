@@ -23,7 +23,7 @@ namespace AVosSouhaits
     {
         public NewProject(int idProjet)
         {
-            this.InitializeComponent();
+            this.InitializeComponent();           
 
             if (idProjet > -1)
             {
@@ -45,9 +45,9 @@ namespace AVosSouhaits
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Projet projet = null;
+            Projets projet = null;
 
-            projet = new Projet();
+            projet = new Projets();
 
             using (var context = new AVosSouhaits.AVSouhaitsDBEntities())
             {

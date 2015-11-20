@@ -25,6 +25,7 @@ namespace AVosSouhaits
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Projet> Projets { get; set; }
+        public virtual DbSet<Composant> Composant { get; set; }
+        public virtual DbSet<Projets> Projets { get; set; }
     }
 }

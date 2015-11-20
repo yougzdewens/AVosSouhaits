@@ -9,7 +9,7 @@ namespace AVosSouhaits.HeritageEntities
     /// <summary>
     /// projet amelioré
     /// </summary>
-    public class ProjetAmelio : Projet
+    public class ProjetAmelio : Projets
     {
         /// <summary>
         /// Gets the civ1.
@@ -50,11 +50,39 @@ namespace AVosSouhaits.HeritageEntities
             }
         }
 
+        public string Source1
+        {
+            get
+            {
+                switch (base.Civilite1)
+                {
+                    case 0:
+                        return @"Images\Mari.png";
+                    default:
+                        return @"Images\Mariée.png";
+                }
+            }
+        }
+
+        public string Source2
+        {
+            get
+            {
+                switch (base.Civilite2)
+                {
+                    case 0:
+                        return @"Images\Mari.png";
+                    default:
+                        return @"Images\Mariée.png";
+                }
+            }
+        }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ProjetAmelio"/> class.
         /// </summary>
         /// <param name="p">The p.</param>
-        public ProjetAmelio(Projet p)
+        public ProjetAmelio(Projets p)
         {
             base.Civilite1 = p.Civilite1;
             base.Civilite2 = p.Civilite2;

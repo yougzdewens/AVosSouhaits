@@ -3,31 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="A Vos Souhaits - Projets" MinHeight="350" 
         MinWidth="550" Background="#F5F5F5">
-    <Window.Resources>
-        <Style x:Key="alternatingWithTriggers" 
-               TargetType="{x:Type ContentPresenter}">
-            <Setter Property="Height" Value="96"></Setter>
-        </Style>
-        <DataTemplate x:Key="MyItemTemplate">
-            <Border x:Name="yahoo" BorderBrush="#FF304B51" BorderThickness="1">
-                <Grid Width="Auto" Background="#FF9FC0C8" Height="96">
-                        <Label Content="Mariage de : " VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,12,0,12"></Label>
-                        <Label Content="{Binding Civ1}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="94,1,0,27" Height="26" Width="142"></Label>
-                        <Label Content="{Binding Civ2}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="94,27,0,1" Height="26" Width="142"></Label>
-                        <Button Tag="{Binding IdProjet}" Content="Editer" Click="EditProjet" Width="58" Margin="494,8,10,12" Height="30"/>                    
-                </Grid>
-            </Border>
-        </DataTemplate>
-    </Window.Resources>
-    <Grid MinHeight="350" MinWidth="550">
-        <ItemsControl ItemsSource="{Binding DataList}" 
-            ItemContainerStyle="{StaticResource alternatingWithTriggers}" 
-            AlternationCount="2" 
-            ItemTemplate="{StaticResource MyItemTemplate}" Margin="20,184,20,20"/>
-        <Rectangle Fill="#FF9FC0C8" Height="70" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Height="47" Margin="20,14,0,0" TextWrapping="Wrap" Text="Projets" VerticalAlignment="Top" Width="108" FontSize="34.667" FontFamily="Coquette Regular" Foreground="White"/>
-        <TextBlock HorizontalAlignment="Left" Height="47" Margin="176,14,0,0" TextWrapping="Wrap" Text="Administration" VerticalAlignment="Top" Width="228" FontSize="34.667" FontFamily="Coquette Regular" Foreground="White"/>
-        <Button Content="Ajouter un projet" HorizontalAlignment="Left" Margin="20,94,0,0" VerticalAlignment="Top" Width="231" Height="67" BorderBrush="#FF777373" Background="#FFE0D2C6" FontFamily="Coquette Regular" FontSize="26.667" Foreground="#FF777373" Click="Button_Click"/>
-        <Rectangle x:Name="RectGray" Fill="#FF7A7A7A" HorizontalAlignment="Left" Height="762.4" Margin="0,0,0,-0.8" VerticalAlignment="Top" Width="1017.6" Opacity="0.505" Visibility="Hidden"/>
-    </Grid>
+
+
+    <DockPanel>
+        <Grid>
+            <Rectangle Fill="#FF9FC0C8" Height="70" VerticalAlignment="Top"/>
+            <Button x:Name="bntProjets" Content="Projets" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Width="135" Height="51" Background="{x:Null}" BorderBrush="White" Foreground="White" FontSize="36" FontFamily="Coquette Regular" BorderThickness="0" Click="bntProjets_Click"/>
+            <Button x:Name="bntProjets_Copy" Content="Administration" HorizontalAlignment="Left" Margin="185,10,0,0" VerticalAlignment="Top" Width="264" Height="51" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="36" FontFamily="Coquette Regular" BorderThickness="0" Click="bntProjets_Copy_Click"/>
+            <Frame x:Name="_mainFrame" Margin="0,70,0,-14"  NavigationUIVisibility="Hidden"/>
+        </Grid>
+    </DockPanel>
 </Window>

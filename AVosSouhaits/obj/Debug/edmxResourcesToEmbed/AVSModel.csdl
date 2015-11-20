@@ -1,6 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="AVSouhaitsDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="Projet">
+  <EntityType Name="Composant">
+    <Key>
+      <PropertyRef Name="IdComposant" />
+    </Key>
+    <Property Name="IdComposant" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UrlPhoto" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="false" />
+    <Property Name="Nom" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="false" />
+    <Property Name="Note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Projets">
     <Key>
       <PropertyRef Name="IdProjet" />
     </Key>
@@ -20,6 +29,7 @@
     <Property Name="DateDuMariage" Type="DateTime" />
   </EntityType>
   <EntityContainer Name="AVSouhaitsDBEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Projets" EntityType="Self.Projet" />
+    <EntitySet Name="Composant" EntityType="Self.Composant" />
+    <EntitySet Name="Projets" EntityType="Self.Projets" />
   </EntityContainer>
 </Schema>

@@ -1,5 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="AVSouhaitsDBModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=D:\Workingdir\Perso_AVosSouhaits\AVosSouhaits\AVosSouhaits\AVSouhaitsDB.sqlite" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Composant">
+    <Key>
+      <PropertyRef Name="IdComposant" />
+    </Key>
+    <Property Name="IdComposant" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UrlPhoto" Type="varchar" MaxLength="2147483647" />
+    <Property Name="Nom" Type="varchar" MaxLength="2147483647" />
+    <Property Name="Note" Type="nvarchar" MaxLength="2147483647" />
+  </EntityType>
   <EntityType Name="Projets">
     <Key>
       <PropertyRef Name="IdProjet" />
@@ -20,6 +29,7 @@
     <Property Name="DateDuMariage" Type="datetime" />
   </EntityType>
   <EntityContainer Name="AVSouhaitsDBModelStoreContainer">
+    <EntitySet Name="Composant" EntityType="Self.Composant" store:Type="Tables" />
     <EntitySet Name="Projets" EntityType="Self.Projets" store:Type="Tables" />
   </EntityContainer>
 </Schema>

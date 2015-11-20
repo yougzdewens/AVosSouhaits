@@ -10,8 +10,8 @@
 
     <Grid x:Name="LayoutRoot">
         <ComboBox SelectedValue="{Binding Civilite1}" SelectedValuePath="Tag" x:Name="CbCivi1" HorizontalAlignment="Left" Margin="135,75,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem Tag="0">Mlle</ComboBoxItem>
-            <ComboBoxItem Tag="1">Mr</ComboBoxItem>
+            <ComboBoxItem Tag="1">Mlle</ComboBoxItem>
+            <ComboBoxItem Tag="0">Mr</ComboBoxItem>
         </ComboBox>
         <Label Content="Civilité :" HorizontalAlignment="Left" Margin="269,75,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
         <Label Content="Nom :" HorizontalAlignment="Left" Margin="269,104,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
@@ -27,8 +27,8 @@
         <Label Content="Budget :" HorizontalAlignment="Left" Margin="269,243,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
         <Label Content="Date :" HorizontalAlignment="Left" Margin="269,272,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
         <ComboBox SelectedValue="{Binding Civilite2}" SelectedValuePath="Tag" x:Name="CbCivi2" HorizontalAlignment="Left" Margin="375,75,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem Tag="0">Mlle</ComboBoxItem>
-            <ComboBoxItem Tag="1">Mr</ComboBoxItem>
+            <ComboBoxItem Tag="1">Mlle</ComboBoxItem>
+            <ComboBoxItem Tag="0">Mr</ComboBoxItem>
         </ComboBox>
         <TextBox x:Name="nom1" HorizontalAlignment="Left" Height="23" Margin="135,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Nom1, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
         <TextBox x:Name="prenom2" HorizontalAlignment="Left" Height="23" Margin="135,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Prenom1, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
