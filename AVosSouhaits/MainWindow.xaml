@@ -1,8 +1,7 @@
 ﻿<Window x:Class="AVosSouhaits.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="A Vos Souhaits - Projets" MinHeight="350" 
-        MinWidth="550" Background="#F5F5F5">
+        Title="A Vos Souhaits - Projets" Background="#F5F5F5" Width="700">
 
 
     <DockPanel>

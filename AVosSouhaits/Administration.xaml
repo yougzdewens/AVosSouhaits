@@ -4,24 +4,25 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="300" d:DesignWidth="700"
 	Title="Administration">
     <Page.Resources>
         <Style x:Key="alternatingWithTriggers" 
                TargetType="{x:Type ContentPresenter}">
-            <Setter Property="Height" Value="96"></Setter>
+            <Setter Property="Height" Value="120"></Setter>
         </Style>
         <DataTemplate x:Key="MyItemTemplate">
-            <Border BorderBrush="#FF304B51" BorderThickness="1">
-                <StackPanel Orientation="Horizontal">
-                    <Grid Width="275" Background="#FF9FC0C8" Height="75">
-                        <Image HorizontalAlignment="Left" Source="{Binding Comp}" x:Name="img1" Height="60" Margin="205,10,0,0" VerticalAlignment="Top" Width="60"/>
-                        <Image HorizontalAlignment="Left" Source="{Binding Comp}" x:Name="img2" Height="60" Margin="140,10,0,0" VerticalAlignment="Top" Width="60"/>
-                        <Image HorizontalAlignment="Left" Source="{Binding Comp}" x:Name="img3" Height="60" Margin="75,10,0,0" VerticalAlignment="Top" Width="60"/>
-                        <Image HorizontalAlignment="Left" Source="{Binding Comp}" x:Name="img4" Height="60" Margin="10,10,0,0" VerticalAlignment="Top" Width="60"/>
-                    </Grid>
-                </StackPanel>
-            </Border>
+            <Grid Width="700" Background="#FF9FC0C8" Height="174">
+                <Button Click="Btn1_click" Name="up" BorderBrush="#FF24779D" Margin="10,10,543,10">
+                    <Button.Background>
+                        <ImageBrush ImageSource="{Binding compo1.UrlPhotoFull}" x:Name="img1"/>
+                    </Button.Background>
+                    <Button Content="Button" Width="75"/>
+                </Button>
+                <Image HorizontalAlignment="Left" Source="{Binding compo2.UrlPhotoFull}" x:Name="img2" Height="129" Margin="219,21,0,0" VerticalAlignment="Top" Width="130"/>
+                <Image HorizontalAlignment="Left" Source="{Binding compo3.UrlPhotoFull}" x:Name="img3" Height="129" Margin="354,21,0,0" VerticalAlignment="Top" Width="129"/>
+                <Image HorizontalAlignment="Left" Source="{Binding compo4.UrlPhotoFull}" x:Name="img4" Height="129" Margin="516,21,0,0" VerticalAlignment="Top" Width="128"/>
+            </Grid>
         </DataTemplate>
     </Page.Resources>
     <Grid>

@@ -11,8 +11,8 @@
             <Setter Property="Height" Value="96"></Setter>
         </Style>
         <DataTemplate x:Key="MyItemTemplate">
-            <Border BorderBrush="#FF304B51" BorderThickness="1">
-                <Grid Width="Auto" Background="#FF9FC0C8" Height="96">
+            <Border BorderBrush="#FF5C7F87" BorderThickness="1">
+                <Grid Width="Auto" Background="#FF304B51" Height="96" x:Name="FooBar">
                     <Label Content="Mariage de : " VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,12,0,12"></Label>
                     <Label Content="{Binding Civ1}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="129,20,-5,50" Height="26" Width="142"></Label>
                     <Label Content="{Binding Civ2}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="129,51,-5,19" Height="26" Width="142"></Label>
@@ -22,6 +22,14 @@
                     <Image HorizontalAlignment="Left" Source="{Binding Source2}" x:Name="img2" Height="27" Margin="94,51,0,0" VerticalAlignment="Top" Width="27"/>
                 </Grid>
             </Border>
+            <DataTemplate.Triggers>
+                <Trigger Property="ItemsControl.AlternationIndex" Value="0">
+                    <Setter Property="Background" Value="#FF9FC0C8" TargetName="FooBar"/>
+                </Trigger>
+                <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                    <Setter Property="Background" Value="#FFF5F5F5" TargetName="FooBar"/>
+                </Trigger>
+            </DataTemplate.Triggers>
         </DataTemplate>
     </Page.Resources>
     <Grid>

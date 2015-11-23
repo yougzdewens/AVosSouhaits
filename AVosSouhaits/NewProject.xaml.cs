@@ -45,9 +45,7 @@ namespace AVosSouhaits
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Projets projet = null;
-
-            projet = new Projets();
+            Projets projet = new Projets();
 
             using (var context = new AVosSouhaits.AVSouhaitsDBEntities())
             {

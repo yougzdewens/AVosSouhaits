@@ -127,6 +127,7 @@
     <Compile Include="Composant.cs">
       <DependentUpon>AVSModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="HeritageEntities\LineOfComponent.cs" />
     <Compile Include="HeritageEntities\ProjetAmelio.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

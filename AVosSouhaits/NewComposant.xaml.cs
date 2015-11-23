@@ -49,7 +49,7 @@ namespace AVosSouhaits
         private void Button_save_Click(object sender, RoutedEventArgs e)
         {
             string saveFolderpath = @".\ContactImages\";
-            
+
             string filepath = tbPathImage.Text;
 
             FileInfo fi = new FileInfo(filepath);
@@ -66,6 +66,20 @@ namespace AVosSouhaits
             using (var context = new AVosSouhaits.AVSouhaitsDBEntities())
             {
                 Composant compo = new Composant();
+
+                //if (idProjet.Text != string.Empty)
+                //{
+                //    long idProj = long.Parse(idProjet.Text);
+
+                //    projet = (from b in context.Projets
+                //              where b.IdProjet == idProj
+                //              select b).FirstOrDefault();
+                //}
+                //else
+                //{
+                context.Composant.Add(compo);
+                //}
+
                 compo.Nom = tbName.Text;
                 compo.Note = tbNote.Text;
                 compo.UrlPhoto = saveFolderpath + finename;

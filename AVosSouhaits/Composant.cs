@@ -11,6 +11,7 @@ namespace AVosSouhaits
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
     
     public partial class Composant
     {
@@ -18,5 +19,12 @@ namespace AVosSouhaits
         public string UrlPhoto { get; set; }
         public string Nom { get; set; }
         public string Note { get; set; }
+
+        public string UrlPhotoFull { 
+            get
+            {
+                return Path.GetFullPath(UrlPhoto);
+            }
+        }
     }
 }

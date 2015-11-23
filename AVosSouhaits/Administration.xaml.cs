@@ -1,5 +1,7 @@
-﻿using System;
+﻿using AVosSouhaits.HeritageEntities;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,17 +22,72 @@ namespace AVosSouhaits
     /// </summary>
     public partial class Administration : Page
     {
+        /// <summary>
+        /// The data list property
+        /// </summary>
+        public static readonly DependencyProperty DataListProperty =
+        DependencyProperty.Register("DataList", typeof(ObservableCollection<LineOfComponent>), typeof(Administration));
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Administration"/> class.
+        /// </summary>
         public Administration()
+
         {
             InitializeComponent();
 
             LoadComposants();
+
+            this.DataContext = this; 
         }
 
+        /// <summary>
+        /// Loads the composants.
+        /// </summary>
         private void LoadComposants() {
+            using (var context = new AVosSouhaits.AVSouhaitsDBEntities())
+            {
+                ObservableCollection<LineOfComponent> linesOfComponent = new ObservableCollection<LineOfComponent>();
 
+                // Query for all blogs with names starting with B 
+                var compos = (from b in context.Composant
+                              orderby b.Nom
+                              select b).ToList();
+
+                for (int i = 0; i < compos.Count; i=i+4)
+                {
+                    LineOfComponent line = new LineOfComponent();
+
+                    line.compo1 = compos[i];
+
+
+                    if (i + 1 < compos.Count)
+                    {
+                        line.compo2 = compos[i + 1];
+                    }
+
+                    if (i + 2 < compos.Count)
+                    {
+                        line.compo3 = compos[i + 2];
+                    }
+
+                    if (i + 3 < compos.Count)
+                    {
+                        line.compo4 = compos[i + 3];
+                    }
+
+                    linesOfComponent.Add(line);
+                }
+
+                this.SetValue(Administration.DataListProperty, linesOfComponent);
+            }
         }
 
+        /// <summary>
+        /// Handles the Click event of the Button control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             RectGray.Visibility = Visibility.Visible;
@@ -40,10 +97,20 @@ namespace AVosSouhaits
             wind.Closing += new System.ComponentModel.CancelEventHandler(wind_Closing);
         }
 
+        /// <summary>
+        /// Handles the Closing event of the wind control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.ComponentModel.CancelEventArgs"/> instance containing the event data.</param>
         private void wind_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            //LoadProjets();
+            LoadComposants();
             RectGray.Visibility = Visibility.Hidden;
+        }
+
+        private void Btn1_click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

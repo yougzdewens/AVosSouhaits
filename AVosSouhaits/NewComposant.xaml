@@ -13,6 +13,6 @@
         <TextBox x:Name="tbNote" HorizontalAlignment="Left" Height="164" Margin="107,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155"/>
         <Button Content="Enregistrer" HorizontalAlignment="Left" Margin="422,317,0,0" VerticalAlignment="Top" Width="120" Height="32" Click="Button_save_Click"/>
         <Label Content="Nom :" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbName" HorizontalAlignment="Left" Height="23" Margin="107,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" IsEnabled="False"/>
+        <TextBox x:Name="tbName" HorizontalAlignment="Left" Height="23" Margin="107,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155"/>
     </Grid>
 </Window>
