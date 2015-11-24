@@ -91,7 +91,18 @@ namespace AVosSouhaits
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             RectGray.Visibility = Visibility.Visible;
-            NewComposant wind = new NewComposant();
+            NewComposant wind = new NewComposant(-1);
+            wind.Owner = Window.GetWindow(this);
+            wind.Show();
+            wind.Closing += new System.ComponentModel.CancelEventHandler(wind_Closing);
+        }
+
+        private void EditComposant(object sender, System.Windows.RoutedEventArgs e)
+        {
+            int idComposant = int.Parse(((Button)sender).Tag.ToString());
+
+            RectGray.Visibility = Visibility.Visible;
+            NewComposant wind = new NewComposant(idComposant);
             wind.Owner = Window.GetWindow(this);
             wind.Show();
             wind.Closing += new System.ComponentModel.CancelEventHandler(wind_Closing);

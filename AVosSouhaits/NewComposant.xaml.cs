@@ -20,9 +20,22 @@ namespace AVosSouhaits
     /// </summary>
     public partial class NewComposant : Window
     {
-        public NewComposant()
+        public NewComposant(int idComposant)
         {
             InitializeComponent();
+
+            if (idComposant > -1)
+            {
+                using (var context = new AVosSouhaits.AVSouhaitsDBEntities())
+                {
+                    // Query for all blogs with names starting with B 
+                    var composant = (from b in context.Composant
+                                  where b.IdComposant == idComposant
+                                  select b).FirstOrDefault();
+
+                    LayoutRoot.DataContext = composant;
+                }
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
