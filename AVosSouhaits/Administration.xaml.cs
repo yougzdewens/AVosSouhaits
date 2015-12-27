@@ -47,6 +47,8 @@ namespace AVosSouhaits
         private void LoadComposants() {
             using (var context = new AVosSouhaits.AVSouhaitsDBEntities())
             {
+                DateTime now = DateTime.Now;
+
                 ObservableCollection<LineOfComponent> linesOfComponent = new ObservableCollection<LineOfComponent>();
 
                 // Query for all blogs with names starting with B 
@@ -54,30 +56,34 @@ namespace AVosSouhaits
                               orderby b.Nom
                               select b).ToList();
 
-                for (int i = 0; i < compos.Count; i=i+4)
-                {
-                    LineOfComponent line = new LineOfComponent();
-
-                    line.compo1 = compos[i];
-
-
-                    if (i + 1 < compos.Count)
+                Parallel.For(0, compos.Count / 4, i =>
                     {
-                        line.compo2 = compos[i + 1];
-                    }
+                        int value = i * 4;
 
-                    if (i + 2 < compos.Count)
-                    {
-                        line.compo3 = compos[i + 2];
-                    }
+                        LineOfComponent line = new LineOfComponent();
 
-                    if (i + 3 < compos.Count)
-                    {
-                        line.compo4 = compos[i + 3];
-                    }
+                        line.compo1 = compos[value];
 
-                    linesOfComponent.Add(line);
-                }
+
+                        if (value + 1 < compos.Count)
+                        {
+                            line.compo2 = compos[value + 1];
+                        }
+
+                        if (value + 2 < compos.Count)
+                        {
+                            line.compo3 = compos[value + 2];
+                        }
+
+                        if (value + 3 < compos.Count)
+                        {
+                            line.compo4 = compos[value + 3];
+                        }
+
+                        linesOfComponent.Add(line);
+                    });
+
+                TimeSpan ts = DateTime.Now - now;
 
                 this.SetValue(Administration.DataListProperty, linesOfComponent);
             }

@@ -1,18 +1,19 @@
 ﻿<Window x:Class="AVosSouhaits.NewComposant"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="NewComposant" Height="413.251" Width="575.829">
+        Title="NewComposant" Height="413.251" Width="575.829"
+        WindowStartupLocation="CenterOwner">
     <Grid  x:Name="LayoutRoot">
-        <TextBox x:Name="tbPathImage" HorizontalAlignment="Left" Height="23" Margin="107,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox x:Name="tbPathImage" Text="{Binding UrlPhoto, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" HorizontalAlignment="Left" Height="23" Margin="107,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
         <Label Content="Image :" HorizontalAlignment="Left" Margin="10,23,0,0" VerticalAlignment="Top"/>
         <Button Content="..." HorizontalAlignment="Left" Margin="232,26,0,0" VerticalAlignment="Top" Width="30" Height="23" RenderTransformOrigin="-0.742,0.31" Click="Button_Click"/>
         <Label Content="Description :" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top"/>
         <Border BorderBrush="#FFE0D2C6" BorderThickness="1" Margin="289,23,26,164">
-            <Image x:Name="imgSrc" Stretch="Uniform" HorizontalAlignment="Left" Height="195" Margin="1,-1,-1,-1" VerticalAlignment="Top" Width="251"/>
+            <Image x:Name="imgSrc" Source="{Binding UrlPhoto}" Stretch="Uniform" HorizontalAlignment="Left" Height="195" Margin="1,-1,-1,-1" VerticalAlignment="Top" Width="251"/>
         </Border>
-        <TextBox x:Name="tbNote" HorizontalAlignment="Left" Height="164" Margin="107,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155"/>
+        <TextBox x:Name="tbNote" Text="{Binding Note}" HorizontalAlignment="Left" Height="164" Margin="107,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155"/>
         <Button Content="Enregistrer" HorizontalAlignment="Left" Margin="422,317,0,0" VerticalAlignment="Top" Width="120" Height="32" Click="Button_save_Click"/>
         <Label Content="Nom :" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbName" HorizontalAlignment="Left" Height="23" Margin="107,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155"/>
+        <TextBox x:Name="tbName" Text="{Binding Nom}" HorizontalAlignment="Left" Height="23" Margin="107,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155"/>
     </Grid>
 </Window>
