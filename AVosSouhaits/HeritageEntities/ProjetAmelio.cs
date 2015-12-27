@@ -78,6 +78,27 @@ namespace AVosSouhaits.HeritageEntities
             }
         }
 
+        public string NomProj
+        {
+            get
+            {
+                if (this.Prenom1 != string.Empty && this.Prenom2 != string.Empty)
+                {
+                    return this.Prenom1 + " et " + this.Prenom2;
+                }
+                else
+                {
+                    return "Nouveau projet";
+                }
+            }
+        }
+
+        public ProjetAmelio()
+        {
+            base.Prenom1 = "";
+            base.Prenom2 = "";
+        }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ProjetAmelio"/> class.
         /// </summary>

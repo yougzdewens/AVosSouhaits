@@ -4,46 +4,67 @@
 	xmlns:local="clr-namespace:AVosSouhaits"
 	x:Class="AVosSouhaits.NewProject"
 	x:Name="Window"
-	Width="622.798" Height="485.256"
+	Width="672.947" Height="506.749"
 	WindowStartupLocation="CenterOwner" Loaded="Window_Loaded"
     DataContext="{Binding RelativeSource={RelativeSource Self}}">
 
     <Grid x:Name="LayoutRoot">
-        <ComboBox SelectedValue="{Binding Civilite1}" SelectedValuePath="Tag" x:Name="CbCivi1" HorizontalAlignment="Left" Margin="135,75,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem Tag="1">Mlle</ComboBoxItem>
-            <ComboBoxItem Tag="0">Mr</ComboBoxItem>
-        </ComboBox>
-        <Label Content="Civilité :" HorizontalAlignment="Left" Margin="269,75,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
-        <Label Content="Nom :" HorizontalAlignment="Left" Margin="269,104,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
-        <Label Content="Prénom :" HorizontalAlignment="Left" Margin="269,133,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
-        <Label Content="Civilité :" HorizontalAlignment="Left" Margin="34,75,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
-        <Label Content="Nom :" HorizontalAlignment="Left" Margin="34,104,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
-        <Label Content="Prénom :" HorizontalAlignment="Left" Margin="34,133,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
-        <Label Content="Adresse :" HorizontalAlignment="Left" Margin="34,214,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
-        <Label Content="Code Postal :" HorizontalAlignment="Left" Margin="34,243,0,0" VerticalAlignment="Top" Height="29" Width="83"/>
-        <Label Content="Ville :" HorizontalAlignment="Left" Margin="34,272,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
-        <Label Content="Téléphone :" HorizontalAlignment="Left" Margin="34,301,0,0" VerticalAlignment="Top" Height="29" Width="80"/>
-        <Label Content="Email :" HorizontalAlignment="Left" Margin="269,214,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
-        <Label Content="Budget :" HorizontalAlignment="Left" Margin="269,243,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
-        <Label Content="Date :" HorizontalAlignment="Left" Margin="269,272,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
-        <ComboBox SelectedValue="{Binding Civilite2}" SelectedValuePath="Tag" x:Name="CbCivi2" HorizontalAlignment="Left" Margin="375,75,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem Tag="1">Mlle</ComboBoxItem>
-            <ComboBoxItem Tag="0">Mr</ComboBoxItem>
-        </ComboBox>
-        <TextBox x:Name="nom1" HorizontalAlignment="Left" Height="23" Margin="135,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Nom1, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
-        <TextBox x:Name="prenom2" HorizontalAlignment="Left" Height="23" Margin="135,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Prenom1, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
-        <TextBox x:Name="nom2" HorizontalAlignment="Left" Height="23" Margin="375,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Nom2, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
-        <TextBox x:Name="prenom1" HorizontalAlignment="Left" Height="23" Margin="375,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Prenom2, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
-        <TextBox x:Name="adresse" HorizontalAlignment="Left" Height="23" Margin="135,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Adresse, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
-        <TextBox x:Name="codepostal" HorizontalAlignment="Left" Height="23" Margin="135,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding CodePostal, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
-        <TextBox x:Name="ville" HorizontalAlignment="Left" Height="23" Margin="135,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Ville, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
-        <TextBox x:Name="telephone" HorizontalAlignment="Left" Height="23" Margin="135,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Telephone, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
-        <TextBox x:Name="email" HorizontalAlignment="Left" Height="23" Margin="375,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" Text="{Binding Email, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
-        <TextBox x:Name="budget" HorizontalAlignment="Left" Height="23" Margin="375,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" Text="{Binding Budget, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
-        <Button Content="Enregistrer" HorizontalAlignment="Left" Margin="419,337,0,0" VerticalAlignment="Top" Width="120" Height="32" Click="Button_Click"/>
-        <DatePicker x:Name="dateDuMarriage" HorizontalAlignment="Left" Margin="375,271,0,0" VerticalAlignment="Top" Width="164" SelectedDate="{Binding DateDuMariage, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
-        <Label Content="Nouveau projet" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Height="36" Margin="15,10,0,0" FontFamily="Coquette Regular" FontSize="18"/>
-        <TextBox x:Name="idProjet" Visibility="Hidden" HorizontalAlignment="Left" Height="23" Margin="485,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding IdProjet, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
-
+        <Label Content="{Binding NomProj}" HorizontalAlignment="Left" Margin="43,4,0,0" VerticalAlignment="Top" Width="431" Height="35" FontFamily="Coquette Regular" FontSize="16"/>
+        <Expander x:Name="expand" Header="" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-1.158,-2.197" Margin="10,8,0,0" Width="646">
+            <Grid Margin="0,0,-0.2,0">
+                <ComboBox SelectedValue="{Binding Civilite1}" SelectedValuePath="Tag" x:Name="CbCivi1" HorizontalAlignment="Left" Margin="135,11,0,0" VerticalAlignment="Top" Width="120">
+                    <ComboBoxItem Tag="1">Mlle</ComboBoxItem>
+                    <ComboBoxItem Tag="0">Mr</ComboBoxItem>
+                </ComboBox>
+                <Label Content="Civilité :" HorizontalAlignment="Left" Margin="353,11,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
+                <Label Content="Nom :" HorizontalAlignment="Left" Margin="353,45,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
+                <Label Content="Prénom :" HorizontalAlignment="Left" Margin="353,79,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
+                <Label Content="Civilité :" HorizontalAlignment="Left" Margin="34,11,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
+                <Label Content="Nom :" HorizontalAlignment="Left" Margin="34,45,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
+                <Label Content="Prénom :" HorizontalAlignment="Left" Margin="34,79,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
+                <Label Content="Adresse :" HorizontalAlignment="Left" Margin="34,138,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
+                <Label Content="Code Postal :" HorizontalAlignment="Left" Margin="34,175,0,0" VerticalAlignment="Top" Height="29" Width="83"/>
+                <Label Content="Ville :" HorizontalAlignment="Left" Margin="34,214,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
+                <Label Content="Téléphone :" HorizontalAlignment="Left" Margin="34,251,0,0" VerticalAlignment="Top" Height="29" Width="80"/>
+                <Label Content="Email :" HorizontalAlignment="Left" Margin="353,138,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
+                <Label Content="Budget :" HorizontalAlignment="Left" Margin="353,175,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
+                <Label Content="Date :" HorizontalAlignment="Left" Margin="353,214,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
+                <ComboBox SelectedValue="{Binding Civilite2}" SelectedValuePath="Tag" x:Name="CbCivi2" HorizontalAlignment="Left" Margin="459,11,0,0" VerticalAlignment="Top" Width="120">
+                    <ComboBoxItem Tag="1">Mlle</ComboBoxItem>
+                    <ComboBoxItem Tag="0">Mr</ComboBoxItem>
+                </ComboBox>
+                <TextBox x:Name="nom1" HorizontalAlignment="Left" Height="23" Margin="135,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Nom1, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                <TextBox x:Name="prenom2" HorizontalAlignment="Left" Height="23" Margin="135,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Prenom1, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                <TextBox x:Name="nom2" HorizontalAlignment="Left" Height="23" Margin="459,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Nom2, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                <TextBox x:Name="prenom1" HorizontalAlignment="Left" Height="23" Margin="459,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Prenom2, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                <TextBox x:Name="adresse" HorizontalAlignment="Left" Height="23" Margin="135,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Adresse, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                <TextBox x:Name="codepostal" HorizontalAlignment="Left" Height="23" Margin="135,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding CodePostal, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                <TextBox x:Name="ville" HorizontalAlignment="Left" Height="23" Margin="135,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Ville, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                <TextBox x:Name="telephone" HorizontalAlignment="Left" Height="23" Margin="135,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Telephone, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                <TextBox x:Name="email" HorizontalAlignment="Left" Height="23" Margin="459,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" Text="{Binding Email, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                <TextBox x:Name="budget" HorizontalAlignment="Left" Height="23" Margin="459,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" Text="{Binding Budget, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                <Button Content="Enregistrer" HorizontalAlignment="Left" Margin="503,287,0,0" VerticalAlignment="Top" Width="120" Height="32" Click="Button_Click"/>
+                <DatePicker x:Name="dateDuMarriage" HorizontalAlignment="Left" Margin="459,213,0,0" VerticalAlignment="Top" Width="164" SelectedDate="{Binding DateDuMariage, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                <TextBox x:Name="idProjet" Visibility="Hidden" HorizontalAlignment="Left" Height="23" Margin="485,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Id
+                , Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+            </Grid>            
+        </Expander>
+        <Button x:Name="btnaddcompo" Content="add" Margin="10,44,569.4,398.8"></Button>
+        <StackPanel Orientation="Vertical" Margin="0,356,0.4,-0.2">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="test1"></Label>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <Label Content="test2"></Label>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <Label Content="test3"></Label>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <Label Content="test4"></Label>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>

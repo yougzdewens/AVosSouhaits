@@ -34,8 +34,13 @@ namespace AVosSouhaits
                                   where b.IdProjet == idProjet
                                   select b).FirstOrDefault();
 
-                    LayoutRoot.DataContext = projet;
+                    LayoutRoot.DataContext = new ProjetAmelio(projet);
                 }
+            }
+            else
+            {
+                expand.IsExpanded = true;
+                LayoutRoot.DataContext = new ProjetAmelio();
             }
         }
 
@@ -79,7 +84,7 @@ namespace AVosSouhaits
                 context.SaveChanges();
             }
 
-            this.Close();
+            expand.IsExpanded = false;
         }
     }
 }
