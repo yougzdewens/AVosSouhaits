@@ -10,7 +10,7 @@
 
     <Grid x:Name="LayoutRoot">
         <Label Content="{Binding NomProj}" HorizontalAlignment="Left" Margin="43,4,0,0" VerticalAlignment="Top" Width="431" Height="35" FontFamily="Coquette Regular" FontSize="16"/>
-        <Expander x:Name="expand" Header="" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-1.158,-2.197" Margin="10,8,0,0" Width="646">
+        <Expander Visibility="Hidden" x:Name="expand" Header="" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-1.158,-2.197" Margin="10,8,10,0" Width="636" Expanded="expand_Expanded" Collapsed="expand_Collapsed" BorderBrush="#FF9FC0C8">
             <Grid Margin="0,0,-0.2,0">
                 <ComboBox SelectedValue="{Binding Civilite1}" SelectedValuePath="Tag" x:Name="CbCivi1" HorizontalAlignment="Left" Margin="135,11,0,0" VerticalAlignment="Top" Width="120">
                     <ComboBoxItem Tag="1">Mlle</ComboBoxItem>
@@ -49,22 +49,11 @@
                 , Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
             </Grid>            
         </Expander>
-        <Button x:Name="btnaddcompo" Content="add" Margin="10,44,569.4,398.8"></Button>
-        <StackPanel Orientation="Vertical" Margin="0,356,0.4,-0.2">
-            <StackPanel Orientation="Horizontal">
-                <StackPanel Orientation="Vertical">
-                    <Label Content="test1"></Label>
-                </StackPanel>
-                <StackPanel Orientation="Vertical">
-                    <Label Content="test2"></Label>
-                </StackPanel>
-                <StackPanel Orientation="Vertical">
-                    <Label Content="test3"></Label>
-                </StackPanel>
-                <StackPanel Orientation="Vertical">
-                    <Label Content="test4"></Label>
-                </StackPanel>
-            </StackPanel>
+        
+        <StackPanel x:Name="spContentProject" Orientation="Vertical" Height="Auto" VerticalAlignment="Top" Margin="0,39,0,0">
+            <Grid Background="Aqua" Width="80" Height="20" Margin="20" HorizontalAlignment="Left">
+                <Button x:Name="btnaddcompo" Content="add" Click="btnaddcompo_Click"></Button>
+            </Grid>
         </StackPanel>
     </Grid>
 </Window>

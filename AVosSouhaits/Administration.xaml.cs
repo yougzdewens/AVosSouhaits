@@ -52,7 +52,7 @@ namespace AVosSouhaits
                 ObservableCollection<LineOfComponent> linesOfComponent = new ObservableCollection<LineOfComponent>();
 
                 // Query for all blogs with names starting with B 
-                var compos = (from b in context.Composant
+                var compos = (from b in context.Composants
                               orderby b.Nom
                               select b).ToList();
 

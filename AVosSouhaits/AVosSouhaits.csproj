@@ -153,7 +153,7 @@
     <Compile Include="NewProject.xaml.cs">
       <DependentUpon>NewProject.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Projets.cs">
+    <Compile Include="Projet.cs">
       <DependentUpon>AVSModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ProjetsPage.xaml.cs">

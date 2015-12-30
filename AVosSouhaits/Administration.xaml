@@ -72,22 +72,22 @@
             </DataTemplate.Resources>
             <Grid Width="745" Background="#FF9FC0C8" Height="190">
                 <Grid Width="180" Margin="1.5,1.5,0,-1.5" Height="180" HorizontalAlignment="Left" Name="grd1">
-                    <Image HorizontalAlignment="Center" Source="{Binding compo1.UrlPhotoFull, IsAsync=True}" x:Name="img1" Height="160" Margin="10,10,0,0" VerticalAlignment="Center" Width="160" Stretch="Uniform"/>
+                    <Image HorizontalAlignment="Center" Source="{Binding compo1.Image, IsAsync=True}" x:Name="img1" Height="160" Margin="10,10,0,0" VerticalAlignment="Center" Width="160" Stretch="Uniform"/>
                     <Rectangle x:Name="rect1" Fill="Black" HorizontalAlignment="Center" Height="160" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Center" Width="160" Opacity="0"/>
                     <Button Tag="{Binding compo1.IdComposant, IsAsync=True}" x:Name="btnEdit1" Content="Edit" Width="75" Visibility="Hidden" Margin="48.5,123,49,0" Height="21" VerticalAlignment="Center" HorizontalAlignment="Center" Click="EditComposant"/>
                 </Grid>
                 <Grid Width="180" Margin="187.5,0,0,0" Height="180" HorizontalAlignment="Left" Name="grd2">
-                    <Image HorizontalAlignment="Center" Source="{Binding compo2.UrlPhotoFull, IsAsync=True}" x:Name="img2" Height="160" Margin="10.5,10,0,0" VerticalAlignment="Center" Width="160" Stretch="Uniform"/>
+                    <Image HorizontalAlignment="Center" Source="{Binding compo2.Image, IsAsync=True}" x:Name="img2" Height="160" Margin="10.5,10,0,0" VerticalAlignment="Center" Width="160" Stretch="Uniform"/>
                     <Rectangle x:Name="rect2" Fill="Black" HorizontalAlignment="Center" Height="160" Margin="10.5,10,0,0" Stroke="Black" VerticalAlignment="Center" Width="160" Opacity="0"/>
                     <Button Tag="{Binding compo2.IdComposant, IsAsync=True}" x:Name="btnEdit2" Content="Edit" Width="75" Visibility="Hidden" Margin="48.5,123,49,0" Height="21" VerticalAlignment="Center" HorizontalAlignment="Center" Click="EditComposant"/>
                 </Grid>
                 <Grid Width="180" Margin="372.5,0,0,0" Height="180" HorizontalAlignment="Left" Name="grd3">
-                    <Image HorizontalAlignment="Center" Source="{Binding compo3.UrlPhotoFull, IsAsync=True}" x:Name="img3" Height="160" Margin="9,10,0,0" VerticalAlignment="Center" Width="160" Stretch="Uniform"/>
+                    <Image HorizontalAlignment="Center" Source="{Binding compo3.Image, IsAsync=True}" x:Name="img3" Height="160" Margin="9,10,0,0" VerticalAlignment="Center" Width="160" Stretch="Uniform"/>
                     <Rectangle x:Name="rect3" Fill="Black" HorizontalAlignment="Center" Height="160" Margin="9,10,0,0" Stroke="Black" VerticalAlignment="Center" Width="160" Opacity="0"/>
                     <Button Tag="{Binding compo3.IdComposant, IsAsync=True}" x:Name="btnEdit3" Content="Edit" Width="75" Visibility="Hidden" Margin="48.5,123,49,0" Height="21" VerticalAlignment="Center" HorizontalAlignment="Center" Click="EditComposant"/>
                 </Grid>
                 <Grid Width="180" Margin="557.5,0,0,0" Height="180" HorizontalAlignment="Left" Name="grd4">
-                    <Image HorizontalAlignment="Center" Source="{Binding compo4.UrlPhotoFull, IsAsync=True}" x:Name="img4" Height="160" Margin="10,10,0,0" VerticalAlignment="Center" Width="160" Stretch="Uniform"/>
+                    <Image HorizontalAlignment="Center" Source="{Binding compo4.Image, IsAsync=True}" x:Name="img4" Height="160" Margin="10,10,0,0" VerticalAlignment="Center" Width="160" Stretch="Uniform"/>
                     <Rectangle x:Name="rect4" Fill="Black" HorizontalAlignment="Center" Height="160" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Center" Width="160" Opacity="0"/>
                     <Button Tag="{Binding compo4.IdComposant, IsAsync=True}" x:Name="btnEdit4" Content="Edit" Width="75" Visibility="Hidden" Margin="48.5,123,49,0" Height="21" VerticalAlignment="Center" HorizontalAlignment="Center" Click="EditComposant"/>
                 </Grid>

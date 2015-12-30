@@ -9,7 +9,7 @@ namespace AVosSouhaits.HeritageEntities
     /// <summary>
     /// projet amelioré
     /// </summary>
-    public class ProjetAmelio : Projets
+    public class ProjetAmelio : Projet
     {
         /// <summary>
         /// Gets the civ1.
@@ -103,7 +103,7 @@ namespace AVosSouhaits.HeritageEntities
         /// Initializes a new instance of the <see cref="ProjetAmelio"/> class.
         /// </summary>
         /// <param name="p">The p.</param>
-        public ProjetAmelio(Projets p)
+        public ProjetAmelio(Projet p)
         {
             base.Civilite1 = p.Civilite1;
             base.Civilite2 = p.Civilite2;

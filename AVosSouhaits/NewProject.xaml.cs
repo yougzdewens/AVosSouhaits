@@ -23,7 +23,9 @@ namespace AVosSouhaits
     {
         public NewProject(int idProjet)
         {
-            this.InitializeComponent();           
+            this.InitializeComponent();
+
+            expand.Visibility = System.Windows.Visibility.Visible;
 
             if (idProjet > -1)
             {
@@ -50,7 +52,7 @@ namespace AVosSouhaits
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Projets projet = new Projets();
+            Projet projet = new Projet();
 
             using (var context = new AVosSouhaits.AVSouhaitsDBEntities())
             {
@@ -85,6 +87,60 @@ namespace AVosSouhaits
             }
 
             expand.IsExpanded = false;
+        }
+
+        private void expand_Expanded(object sender, RoutedEventArgs e)
+        {
+            spContentProject.Margin = new Thickness(spContentProject.Margin.Left, spContentProject.Margin.Top + 324, spContentProject.Margin.Right, spContentProject.Margin.Bottom);
+        }
+
+        private void expand_Collapsed(object sender, RoutedEventArgs e)
+        {
+            spContentProject.Margin = new Thickness(spContentProject.Margin.Left, spContentProject.Margin.Top - 324, spContentProject.Margin.Right, spContentProject.Margin.Bottom);
+        }
+
+        private void btnaddcompo_Click(object sender, RoutedEventArgs e)
+        {
+            int marginOfStackPanel = 10;
+            int widthOfStackPanel = 50;
+
+            StackPanel spNewCol = new StackPanel();
+            spNewCol.Orientation = Orientation.Vertical;
+            spNewCol.Margin = new Thickness(marginOfStackPanel);
+            spNewCol.Width = widthOfStackPanel;
+            Label lb = new Label();
+            lb.Content = "coucou";
+
+            spNewCol.Children.Add(lb);
+
+
+            double widthLastLine = 0;
+            double widthTotalOfChildren = 0;
+
+            if (spContentProject.Children[spContentProject.Children.Count - 1].GetType() == typeof(StackPanel))
+            {
+                widthLastLine = LayoutRoot.RenderSize.Width;
+
+                foreach (StackPanel spIntern in ((StackPanel)spContentProject.Children[spContentProject.Children.Count - 1]).Children)
+                {
+                    widthTotalOfChildren += spIntern.Width + spIntern.Margin.Left + spIntern.Margin.Right;
+                }
+            }
+
+            StackPanel spLineToAddContent = null;
+
+            if (widthTotalOfChildren == 0 || widthTotalOfChildren + widthOfStackPanel + (marginOfStackPanel * 2) > widthLastLine)
+            {
+                spLineToAddContent = new StackPanel();
+                spLineToAddContent.Orientation = Orientation.Horizontal;
+                spLineToAddContent.Children.Add(spNewCol);
+                spContentProject.Children.Add(spLineToAddContent);
+            }
+            else
+            {
+                spLineToAddContent = (StackPanel)spContentProject.Children[spContentProject.Children.Count - 1];
+                spLineToAddContent.Children.Add(spNewCol);
+            }    
         }
     }
 }

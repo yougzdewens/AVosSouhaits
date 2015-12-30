@@ -29,7 +29,7 @@ namespace AVosSouhaits
                 using (var context = new AVosSouhaits.AVSouhaitsDBEntities())
                 {
                     // Query for all blogs with names starting with B 
-                    var composant = (from b in context.Composant
+                    var composant = (from b in context.Composants
                                   where b.IdComposant == idComposant
                                   select b).FirstOrDefault();
 
@@ -61,20 +61,22 @@ namespace AVosSouhaits
 
         private void Button_save_Click(object sender, RoutedEventArgs e)
         {
-            string saveFolderpath = @".\ContactImages\";
+            //string saveFolderpath = @".\ContactImages\";
 
             string filepath = tbPathImage.Text;
 
-            FileInfo fi = new FileInfo(filepath);
+            //FileInfo fi = new FileInfo(filepath);
 
-            string finename = Guid.NewGuid().ToString() + fi.Extension;
+            //string finename = Guid.NewGuid().ToString() + fi.Extension;
 
-            if (!Directory.Exists(saveFolderpath))
-            {
-                Directory.CreateDirectory(saveFolderpath);
-            }
+            //if (!Directory.Exists(saveFolderpath))
+            //{
+            //    Directory.CreateDirectory(saveFolderpath);
+            //}
 
-            System.IO.File.Copy(filepath, saveFolderpath + finename, true);
+            //System.IO.File.Copy(filepath, saveFolderpath + finename, true);
+
+            imgSrc.Source = null;
 
             using (var context = new AVosSouhaits.AVSouhaitsDBEntities())
             {
@@ -90,15 +92,43 @@ namespace AVosSouhaits
                 //}
                 //else
                 //{
-                context.Composant.Add(compo);
+                context.Composants.Add(compo);
                 //}
 
                 compo.Nom = tbName.Text;
                 compo.Note = tbNote.Text;
-                compo.UrlPhoto = saveFolderpath + finename;
-
+                compo.UrlPhoto = "urlPicture";
+                compo.Image = ConvertImage(filepath);
                 context.SaveChanges();
             }
+        }
+
+        /// <summary>
+        /// Converts the image to byte array
+        /// </summary>
+        /// <param name="pathOfImage">The path of image.</param>
+        /// <returns></returns>
+        private byte[] ConvertImage(string pathOfImage)
+        {
+            System.Windows.Media.Imaging.BitmapFrame bitmapFrame;
+
+            using (var fs = new System.IO.FileStream(pathOfImage, FileMode.Open))
+            {
+                bitmapFrame = BitmapFrame.Create(fs);
+            }
+
+            System.Windows.Media.Imaging.BitmapEncoder encoder =
+                new System.Windows.Media.Imaging.JpegBitmapEncoder();
+            encoder.Frames.Add(bitmapFrame);
+
+            byte[] myBytes;
+            using (var memoryStream = new System.IO.MemoryStream())
+            {
+                encoder.Save(memoryStream);
+                myBytes = memoryStream.ToArray();
+            }
+
+            return myBytes;
         }
     }
 }
